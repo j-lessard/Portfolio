@@ -62,7 +62,8 @@ h2 {
 	font-family: 'Noto Sans', sans-serif;
 	position: absolute;	
 	font-size:44px;
-	left: 26%;
+	left: 50vh;
+	top: 83vh;
 }
 
 h3 {
