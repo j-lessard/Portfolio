@@ -47,9 +47,9 @@ body {
 
 
 #map {
-	top: 100px;
+	top: 15vh;
 	width: 50vw; 
-	height: 5vh; 
+	height: 50vh; 
 	margin: auto
 }
 
