@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Jordan's Portfolio</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	
+	<link rel="stylesheet" href="css\port_slider.css" />
+	<link rel="stylesheet" href="css\leaflet-slider.css"/>
+	<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+    <link href="css/Shorelines.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet"> 
+   
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
+
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans" rel="stylesheet"> 
+</head>
+<body>
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script src='https://unpkg.com/shpjs@latest/dist/shp.js'></script>
+	
+	<script src="js\leaflet.shpfile.js"></script>
+	
+	 <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="resume.html">Resume</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav" style="float: right">
+                    
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+	
+	
+
+
+	<h2>Maine Paleoshorelines</h2>
+
+	<div id="map"></div>
+		<div id="slidecontainer">
+  		<input type="range" min="2000" max="10500" value="2014" step="500" 	class="slider" id="myRange">
+  		<p>Year: <span id="demo"></span></p>
+	</div>
+	
+
+	<div>
+	<h4>Overview</h4>
+	<p1>This project began as an assignment in GIS Applications II and was an attempt to model paleoshorelines throughout Maine's history.
+	</p1>	
+	</div>	
+	
+	<script>
+
+		
+		//Adds map tile
+		var map = L.map('map').setView([44.830629 , -68.792397  ], 6);
+		
+
+    	// Add OpenStreetMap tile layer to map element
+		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '© OpenStreetMap' }).addTo(map);
+		
+		//Adds shapefiles, a lot of them
+		
+		
+
+		var shore11000 = new L.Shapefile('data/11000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore10500 = new L.Shapefile('data/10500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore10000 = new L.Shapefile('data/10000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore9500 = new L.Shapefile('data/9500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore9000 = new L.Shapefile('data/9000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore8500 = new L.Shapefile('data/8500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore8000 = new L.Shapefile('data/8000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore7500 = new L.Shapefile('data/7500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore7000 = new L.Shapefile('data/7000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore6500 = new L.Shapefile('data/6500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore6000 = new L.Shapefile('data/6000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore5500 = new L.Shapefile('data/5500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore5000 = new L.Shapefile('data/5000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore4500 = new L.Shapefile('data/4500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore4000 = new L.Shapefile('data/4000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore3500 = new L.Shapefile('data/3500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore3000 = new L.Shapefile('data/3000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore2500 = new L.Shapefile('data/2500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});		
+
+		var modern = new L.Shapefile('data/modern.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+		
+		
+		
+		
+		modern.addTo(map);
+		var slider = document.getElementById("myRange");
+		var output = document.getElementById("demo");
+		output.innerHTML = "2016 CE"; // Display the default slider value
+		
+		// Update the current slider value (each time you drag the slider handle)
+		slider.oninput = function() {
+		    
+		    
+		    //replace this structure with vairables to avoid skipping layers
+		    //when sliding too quickly. Maybe use arrays
+		   
+			if (this.value == "2000") {
+		    	output.innerHTML = "2016 CE";
+		    	map.removeLayer(shore2500);
+		    	modern.addTo(map);
+		    	
+		  } else if (this.value == "2500") {
+		  		output.innerHTML = "2500 BCE";
+		    	map.removeLayer(modern);
+		    	map.removeLayer(shore3000);
+		    	shore2500.addTo(map);
+		    	
+		  } else if (this.value == "3000") {
+		  		output.innerHTML = "3000 BCE";
+		  		map.removeLayer(shore2500);
+		  		map.removeLayer(shore3500);
+				shore3000.addTo(map);
+		  		    			
+		  } else if (this.value == "3500") {
+		  		output.innerHTML = "3500 BCE";
+		  		map.removeLayer(shore3000);
+		  		map.removeLayer(shore4000);
+				shore3500.addTo(map);
+		  		    			
+		  } else if (this.value == "4000") {
+		  		output.innerHTML = "4000 BCE";
+		  		map.removeLayer(shore3500);
+		  		map.removeLayer(shore4500);
+				shore4000.addTo(map);
+		  		    			
+		  } else if (this.value == "4500") {
+		  		output.innerHTML = "4500 BCE";
+		  		map.removeLayer(shore4000);
+		  		map.removeLayer(shore5000);
+				shore4500.addTo(map);
+		  		    			
+		  } else if (this.value == "5000") {
+		  		output.innerHTML = "5000 BCE";
+		  		map.removeLayer(shore4500);
+		  		map.removeLayer(shore5500);
+				shore5000.addTo(map);
+		  		    			
+		  } else if (this.value == "5500") {
+		  		output.innerHTML = "5500 BCE";
+		  		map.removeLayer(shore5000);
+		  		map.removeLayer(shore6000);
+				shore5500.addTo(map);
+		  
+		  } else if (this.value == "6000") {
+		  		output.innerHTML = "6000 BCE";
+		  		map.removeLayer(shore5500);
+		  		map.removeLayer(shore6500);
+				shore6000.addTo(map);
+
+		  } else if (this.value == "6500") {
+		  		output.innerHTML = "6500 BCE";
+		  		map.removeLayer(shore6000);
+		  		map.removeLayer(shore7000);
+				shore6500.addTo(map);
+
+		  } else if (this.value == "7000") {
+		  		output.innerHTML = "7000 BCE";
+		  		map.removeLayer(shore6500);
+		  		map.removeLayer(shore7500);
+				shore7000.addTo(map);
+
+		} else if (this.value == "7500") {
+		  		output.innerHTML = "7500 BCE";
+		  		map.removeLayer(shore7000);
+		  		map.removeLayer(shore8000);
+				shore7500.addTo(map);
+
+		} else if (this.value == "8000") {
+		  		output.innerHTML = "8000 BCE";
+		  		map.removeLayer(shore7500);
+		  		map.removeLayer(shore8500);
+				shore8000.addTo(map);
+
+		} else if (this.value == "8500") {
+		  		output.innerHTML = "8500 BCE";
+		  		map.removeLayer(shore8000);
+		  		map.removeLayer(shore9000);
+				shore8500.addTo(map);
+
+		} else if (this.value == "9000") {
+		  		output.innerHTML = "9000 BCE";
+		  		map.removeLayer(shore8500);
+		  		map.removeLayer(shore9500);
+				shore9000.addTo(map);
+
+		} else if (this.value == "9500") {
+		  		output.innerHTML = "9500 BCE";
+		  		map.removeLayer(shore9000);
+		  		map.removeLayer(shore10000);
+				shore9500.addTo(map);
+
+		} else if (this.value == "10000") {
+		  		output.innerHTML = "10000 BCE";
+		  		map.removeLayer(shore9500);
+		  		map.removeLayer(shore10500);
+				shore10000.addTo(map);
+
+		} else if (this.value == "10500") {
+		  		output.innerHTML = "10500 BCE";
+		  		map.removeLayer(shore10000);
+		  		map.removeLayer(shore11000);
+				shore10500.addTo(map);
+
+		} else if (this.value == "11000") {
+		  		output.innerHTML = "11000 BCE";
+		  		map.removeLayer(shore10500);
+		  		map.removeLayer(shore11500);
+				shore11000.addTo(map);
+
+		
+		} 
+	
+	}
+	</script>
+
+
+</body>
+</html>
