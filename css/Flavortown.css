@@ -6,44 +6,45 @@ body {
 
 }
 
+h1 {
+	font-family: 'Merriweather', serif;
+	position: relative;	
+	font-size: 44px;
+	left: 14.5vw;
+	color: black;
+
+}
+
 p1 {
 	position: relative;
-	left: 36%;
+	left: 24vw;
 	font-size: 12pt;
 }
 
-h1 {
-	font-style: oblique;
-	font-size:48px;
+p2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	position: relative;
+	display: inline-block;
+	left: 7vw;
+
+}
+
+p3 {
+	position: relative;
+	left: 19%;
+	font-size: 100%;
+
 }
 
 h2 {
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Merriweather', serif;
 	position: relative;	
-	font-size: 44px;
-	left: 25%;
+	font-size: 30px;
+	left: 53%;
+	top: 9VH;
 	color: black;
-
-}
-
-h3 {
-	font-family: 'Franklin Gothic', sans-serif;
-	font-size:24px;
-	position: relative;	
-	left: 39%;
-	color: black;
-
-}
-
-
-
-h4 {
-	font-family: 'Open Sans', sans-serif;
-	font-size:34px;
-	position: absolute;
-	top: 85%;
-	left: 26%;
-	text-decoration: underline;
+	text-decoration: underline
 
 }
 
@@ -55,32 +56,21 @@ h4 {
 
 .graph {
 	position: relative;
-	right: 29%;
+	right: 13vw;
 	width: 175%;
 }
 
-
-p2 {
-	font-family: 'Raleway', sans-serif;
-	font-size:16px;
+.sources ul li {
 	position: relative;
-	display: inline-block;
-	left: 8%;
-
-}
-
-p3 {
-	position: relative;
-	left: 19%;
-	font-size: 100%;
-
+	left:35%;
+	top: 9vh;
 }
 
 img {
 	position: relative;
 	margin-top: 5%;
 	width: 50%;	
-	left: 20%;
+	left: 14.5vw;
 }
 
 a {
