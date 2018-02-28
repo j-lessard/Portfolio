@@ -12,58 +12,49 @@
 	
 	<link rel="stylesheet" href="css\port_slider.css" />
 	<link rel="stylesheet" href="css\leaflet-slider.css"/>
-	<!-- Bootstrap Core CSS -->
+	
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+ 
     <link href="css/3-col-portfolio.css" rel="stylesheet">
 
     <link href="css/Shorelines.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet"> 
-   
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet"> 
-
-    <link href="https://fonts.googleapis.com/css?family=Martel+Sans" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">  
 </head>
 <body>
 	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 	<script src='https://unpkg.com/shpjs@latest/dist/shp.js'></script>
 	
 	<script src="js\leaflet.shpfile.js"></script>
-	
-	 <!-- Navigation -->
-    <!-- Navigation -->
+
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="index.html">Projects</a>
                     </li>
-                    <li>
-                        <a href="resume.html">Resume</a>
-                    </li>
+                    
                 </ul>
                 <ul class="nav navbar-nav" style="float: right">
                     
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="resume.html">Resume</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+            
         </div>
-        <!-- /.container -->
+        
     </nav>
 	
 	
 	
 
 
-	<h2>Maine Paleoshorelines</h2>
+	
 
 	<div id="map"></div>
 		<div id="slidecontainer">
@@ -72,10 +63,28 @@
 	</div>
 	
 
-	<div>
-	<h4>Overview</h4>
-	<p1>This project began as an assignment in GIS Applications II and was an attempt to model paleoshorelines throughout Maine's history.
-	</p1>	
+	<div id = 'text_wrapper'>
+	<h1>Maine Paleoshorelines</h1>
+		<p1>
+			This project began as an assignment in GIS Applications II and was an attempt to model paleoshorelines throughout Maine's history. Building upon the work of a previous student, I used the raster calculator in ArcMap and modeled individual shorelines from 10,500 BCE to 2016. Originally, the final product was a GIF animating the change over time. But I wanted to take it a step further and allow someone to, over the internet, explore the shorelines in detail year by year. In pursuit of that goal, I discovered and began learning LeafletJs. The above map is the culmination of that discovery and learning.
+			<br>
+			<br>
+			<br>
+		</p1>
+		<h2> Sources</h2>
+        <div class="sources">
+            <ul>
+                <li>National Oceanic and Atmospheric Administration </li>
+                <li>Carol White</li>
+                <br>
+                <br>
+                
+            </ul>
+            <br>
+            <br>
+        </div>	
+        <br>
+        <br>
 	</div>	
 	
 	<script>
@@ -90,8 +99,6 @@
 		
 		//Adds shapefiles, a lot of them
 		
-		
-
 		var shore11000 = new L.Shapefile('data/11000.zip', {
 			"style": {
 			"color" : "#FFFFFF",
@@ -247,7 +254,9 @@
 		
 		
 		
-		modern.addTo(map);
+		
+		
+		
 		var slider = document.getElementById("myRange");
 		var output = document.getElementById("demo");
 		output.innerHTML = "2016 CE"; // Display the default slider value
@@ -256,8 +265,7 @@
 		slider.oninput = function() {
 		    
 		    
-		    //replace this structure with vairables to avoid skipping layers
-		    //when sliding too quickly. Maybe use arrays
+		    
 		   
 			if (this.value == "2000") {
 		    	output.innerHTML = "2016 CE";
@@ -376,6 +384,8 @@
 		} 
 	
 	}
+
+	modern.addTo(map);
 	</script>
 
 
