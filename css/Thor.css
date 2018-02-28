@@ -1,0 +1,87 @@
+body {
+	font-family: Garamond, ‘Book Antiqua’, Palatino, serif;
+	font-size: 16px;
+	background-color: #eaece5;
+	height: 100%;
+
+}
+
+
+
+#viz {
+	position: relative;
+	top: 5vh;
+	width: 50vw; 
+	height: 50vh; 
+	right: 1vw;
+	margin: auto
+
+}
+
+
+#text_wrapper {
+	width: 50vw; 
+	
+
+}
+
+
+p1 {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	position: relative;
+	top: 47vh;
+	left: 24.5vw;
+	
+	
+}
+
+h2 {
+	font-family: 'Merriweather', serif;
+	position: relative;	
+	font-size: 30px;
+	left: 44vw;
+	top: 47vh;
+	color: black;
+	text-decoration: underline
+
+}
+
+
+.sources ul li {
+	position: relative;
+	left:35vw;
+	top: 48vh;
+}
+
+a {
+	color: #34576d;
+}
+
+a:hover {
+	color: #333333;
+}
+/* Navigation Bar styling */
+
+
+.navbar-inverse .navbar-brand {
+	color: #b2c2bf;
+	font-size: 16px;
+	float: center;
+}
+
+.navbar-inverse {
+	background-color: #3b3a30;
+	border-color: #666666;
+	-moz-box-shadow: 2px 2px 7px #000;
+	-webkit-box-shadow: 2px 2px 7px #000;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #b2c2bf;
+	font-size: 20px;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #999999;
+}
