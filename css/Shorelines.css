@@ -8,7 +8,7 @@ body {
 
 #slidecontainer {
     width: 47%; /* Width of the outside container */
-    top: 79%;
+    top: 75vh;
     position: absolute;
     left: 26.5%;
 }
@@ -47,53 +47,57 @@ body {
 
 
 #map {
-	top: 15vh;
+	top: 11vh;
 	width: 50vw; 
 	height: 50vh; 
 	margin: auto
 }
 
+
+
 h1 {
-	font-style: oblique;
-	font-size:48px;
+	font-family: 'Merriweather', serif;
+	position: relative;
+	left: 36vw;
+	bottom:50vh;
+	font-size:46px;
 }
 
-h2 {
-	font-family: 'Noto Sans', sans-serif;
-	position: fixed;	
-	font-size:44px;
-	left: 25vw;
-	bottom: 83vh;
-	color: blue;
-
-}
-
-h3 {
-	font-family: 'Franklin Gothic', sans-serif;
-	font-size:24px;
-
-}
-
-
-
-h4 {
-	font-family: 'Open Sans', sans-serif;
-	font-size:34px;
-	position: absolute;
-	top: 85%;
-	left: 26%;
-	text-decoration: underline;
+#text_wrapper {
+	width: 50vw; 
+	
 
 }
 
 p1 {
 	font-family: 'Raleway', sans-serif;
 	font-size:16px;
-	position: absolute;
-	top: 91%;
-	left: 26%;
+	position: relative;
+	top: 17vh;
+	left: 25vw;
+	
 	
 }
+
+h2 {
+	font-family: 'Noto Sans', sans-serif;
+	position: relative;	
+	font-size:30px;
+	left: 45vw;
+	top: 12vh;
+	text-decoration: underline;
+	color: black;
+
+}
+
+.sources ul li {
+	position: relative;
+	left:35vw;
+	top: 12vh;
+}
+
+
+
 
 a {
 	color: #34576d;
