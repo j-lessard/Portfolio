@@ -1,111 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <title>Jordan's Portfolio</title>
-
-    <!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	
+	<link rel="stylesheet" href="css\port_slider.css" />
+	<link rel="stylesheet" href="css\leaflet-slider.css"/>
+	
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+ 
     <link href="css/3-col-portfolio.css" rel="stylesheet">
 
-    <link href="css/Atlas.css" rel="stylesheet">
-
- 
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link href="css/Shorelines.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">  
 </head>
-
 <body>
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+	<script src='https://unpkg.com/shpjs@latest/dist/shp.js'></script>
+	
+	<script src="js\leaflet.shpfile.js"></script>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="index.html">Projects</a>
                     </li>
-                    <li>
-                        <a href="resume.html">Resume</a>
-                    </li>
+                    
                 </ul>
                 <ul class="nav navbar-nav" style="float: right">
                     
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="resume.html">Resume</a>
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
+            
         </div>
-        <!-- /.container -->
+        
     </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-    
-
-    <a href="data/Atlas.pdf">
-        <img class="img-responsive" src="images/Atlas_01.png" alt="">
-    </a>
-    <p1>(Click image to download full PDF)</p1>
-   
-    
+	
+	
+	
 
 
-        <div>
-    <h3>Overview</h3>
-        <div class="text_container">
-            <p2>
+	
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et dui imperdiet, euismod nibh iaculis, placerat lacus. Aliquam ullamcorper quam dapibus efficitur consequat. Sed dolor est, tincidunt ut nisl quis, imperdiet dignissim ligula. Aliquam ac libero dapibus urna pulvinar lobortis a eu nisi. Suspendisse auctor nisi tristique arcu facilisis iaculis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed tristique eros lectus, vel porta diam sagittis id. Praesent commodo, tortor id sodales lobortis, ante tortor porta mi, sed gravida arcu lectus imperdiet massa. Maecenas ultrices lectus et aliquet tincidunt. Suspendisse feugiat mauris lacinia mauris aliquet, eu commodo tortor sagittis. Quisque a malesuada magna. Proin varius iaculis pellentesque.
-    <br>
-    <br>
-    <br>
-    Etiam ut tortor augue. Morbi ultrices in nibh id efficitur. Donec quis porta leo. Maecenas nec velit quam. Proin molestie tristique orci, ut placerat nulla faucibus et. Nunc imperdiet sem tristique finibus finibus. Etiam lectus massa, efficitur vitae rutrum id, pulvinar ut ligula. Suspendisse tincidunt lacus in tortor efficitur finibus. Quisque arcu ante, vehicula vel libero nec, lobortis finibus turpis. Suspendisse pretium ipsum ut risus dapibus semper. Aenean et dui lorem. Proin pellentesque, eros quis lobortis hendrerit, dolor nibh mattis dolor, non elementum dui arcu sed est. In sodales turpis varius, molestie elit sit amet, varius neque. Suspendisse sed aliquet nisi, ac vestibulum ex. Maecenas ut convallis elit.
+	<div id="map"></div>
+		<div id="slidecontainer">
+  		<input type="range" min="2000" max="10500" value="2014" step="500" 	class="slider" id="myRange">
+  		<p>Year: <span id="demo"></span></p>
+	</div>
+	
 
-    Etiam quis elit elit. Cras a leo malesuada, faucibus risus quis, sollicitudin dui. Curabitur maximus purus in sapien tempor feugiat. Integer sit amet blandit est, nec iaculis elit. Praesent sit amet orci et dui bibendum aliquet quis a sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras aliquam, magna nec rhoncus imperdiet, libero est semper nunc, eget volutpat nulla quam vel erat. Nunc a diam interdum, viverra ipsum id, pharetra est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed sit amet tortor non dui mattis vulputate vitae id risus. Ut eleifend, libero id bibendum mollis, massa est pellentesque lorem, sed iaculis metus libero sit amet orci. 
-            </p2>   
-        </div>
-    </div>  
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p3>Copyright &copy; Jordan Lessard 2017</p3>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+	<div id = 'text_wrapper'>
+	<h1>Maine Paleoshorelines</h1>
+		<p1>
+			This project began as an assignment in GIS Applications II and was an attempt to model paleoshorelines throughout Maine's history. Building upon the work of a previous student, I used the raster calculator in ArcMap and modeled individual shorelines from 10,500 BCE to 2016. Originally, the final product was a GIF animating the change over time. But I wanted to take it a step further and allow someone to, over the internet, explore the shorelines in detail year by year. In pursuit of that goal, I discovered and began learning LeafletJs. The above map is the culmination of that discovery and learning.
+			<br>
+			<br>
+			<br>
+		</p1>
+		<h2> Sources</h2>
+        <div class="sources">
+            <ul>
+                <li>National Oceanic and Atmospheric Administration </li>
+                <li>Carol White</li>
+                <br>
+                <br>
+                
+            </ul>
+            <br>
+            <br>
+        </div>	
+        <br>
+        <br>
+	</div>	
+	
+	<script>
 
-    </div>
-    <!-- /.container -->
+		
+		//Adds map tile
+		var map = L.map('map').setView([44.830629 , -68.792397  ], 6);
+		
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    	// Add OpenStreetMap tile layer to map element
+		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '© OpenStreetMap' }).addTo(map);
+		
+		//Adds shapefiles, a lot of them
+		
+		var shore11000 = new L.Shapefile('data/11000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+		var shore10500 = new L.Shapefile('data/10500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore10000 = new L.Shapefile('data/10000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore9500 = new L.Shapefile('data/9500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore9000 = new L.Shapefile('data/9000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore8500 = new L.Shapefile('data/8500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore8000 = new L.Shapefile('data/8000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore7500 = new L.Shapefile('data/7500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore7000 = new L.Shapefile('data/7000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore6500 = new L.Shapefile('data/6500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore6000 = new L.Shapefile('data/6000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore5500 = new L.Shapefile('data/5500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore5000 = new L.Shapefile('data/5000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore4500 = new L.Shapefile('data/4500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore4000 = new L.Shapefile('data/4000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore3500 = new L.Shapefile('data/3500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore3000 = new L.Shapefile('data/3000.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+
+		var shore2500 = new L.Shapefile('data/2500.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});		
+
+		var modern = new L.Shapefile('data/modern.zip', {
+			"style": {
+			"color" : "#FFFFFF",
+			"weight" : 2,
+			"opacity" : 2,
+			}
+		});
+		
+		
+		
+		
+		
+		
+		
+		var slider = document.getElementById("myRange");
+		var output = document.getElementById("demo");
+		output.innerHTML = "2016 CE"; // Display the default slider value
+		
+		// Update the current slider value (each time you drag the slider handle)
+		slider.oninput = function() {
+		    
+		    
+		    
+		   
+			if (this.value == "2000") {
+		    	output.innerHTML = "2016 CE";
+		    	map.removeLayer(shore2500);
+		    	modern.addTo(map);
+		    	
+		  } else if (this.value == "2500") {
+		  		output.innerHTML = "2500 BCE";
+		    	map.removeLayer(modern);
+		    	map.removeLayer(shore3000);
+		    	shore2500.addTo(map);
+		    	
+		  } else if (this.value == "3000") {
+		  		output.innerHTML = "3000 BCE";
+		  		map.removeLayer(shore2500);
+		  		map.removeLayer(shore3500);
+				shore3000.addTo(map);
+		  		    			
+		  } else if (this.value == "3500") {
+		  		output.innerHTML = "3500 BCE";
+		  		map.removeLayer(shore3000);
+		  		map.removeLayer(shore4000);
+				shore3500.addTo(map);
+		  		    			
+		  } else if (this.value == "4000") {
+		  		output.innerHTML = "4000 BCE";
+		  		map.removeLayer(shore3500);
+		  		map.removeLayer(shore4500);
+				shore4000.addTo(map);
+		  		    			
+		  } else if (this.value == "4500") {
+		  		output.innerHTML = "4500 BCE";
+		  		map.removeLayer(shore4000);
+		  		map.removeLayer(shore5000);
+				shore4500.addTo(map);
+		  		    			
+		  } else if (this.value == "5000") {
+		  		output.innerHTML = "5000 BCE";
+		  		map.removeLayer(shore4500);
+		  		map.removeLayer(shore5500);
+				shore5000.addTo(map);
+		  		    			
+		  } else if (this.value == "5500") {
+		  		output.innerHTML = "5500 BCE";
+		  		map.removeLayer(shore5000);
+		  		map.removeLayer(shore6000);
+				shore5500.addTo(map);
+		  
+		  } else if (this.value == "6000") {
+		  		output.innerHTML = "6000 BCE";
+		  		map.removeLayer(shore5500);
+		  		map.removeLayer(shore6500);
+				shore6000.addTo(map);
+
+		  } else if (this.value == "6500") {
+		  		output.innerHTML = "6500 BCE";
+		  		map.removeLayer(shore6000);
+		  		map.removeLayer(shore7000);
+				shore6500.addTo(map);
+
+		  } else if (this.value == "7000") {
+		  		output.innerHTML = "7000 BCE";
+		  		map.removeLayer(shore6500);
+		  		map.removeLayer(shore7500);
+				shore7000.addTo(map);
+
+		} else if (this.value == "7500") {
+		  		output.innerHTML = "7500 BCE";
+		  		map.removeLayer(shore7000);
+		  		map.removeLayer(shore8000);
+				shore7500.addTo(map);
+
+		} else if (this.value == "8000") {
+		  		output.innerHTML = "8000 BCE";
+		  		map.removeLayer(shore7500);
+		  		map.removeLayer(shore8500);
+				shore8000.addTo(map);
+
+		} else if (this.value == "8500") {
+		  		output.innerHTML = "8500 BCE";
+		  		map.removeLayer(shore8000);
+		  		map.removeLayer(shore9000);
+				shore8500.addTo(map);
+
+		} else if (this.value == "9000") {
+		  		output.innerHTML = "9000 BCE";
+		  		map.removeLayer(shore8500);
+		  		map.removeLayer(shore9500);
+				shore9000.addTo(map);
+
+		} else if (this.value == "9500") {
+		  		output.innerHTML = "9500 BCE";
+		  		map.removeLayer(shore9000);
+		  		map.removeLayer(shore10000);
+				shore9500.addTo(map);
+
+		} else if (this.value == "10000") {
+		  		output.innerHTML = "10000 BCE";
+		  		map.removeLayer(shore9500);
+		  		map.removeLayer(shore10500);
+				shore10000.addTo(map);
+
+		} else if (this.value == "10500") {
+		  		output.innerHTML = "10500 BCE";
+		  		map.removeLayer(shore10000);
+		  		map.removeLayer(shore11000);
+				shore10500.addTo(map);
+
+		} else if (this.value == "11000") {
+		  		output.innerHTML = "11000 BCE";
+		  		map.removeLayer(shore10500);
+		  		map.removeLayer(shore11500);
+				shore11000.addTo(map);
+
+		
+		} 
+	
+	}
+
+	modern.addTo(map);
+	</script>
+
 
 </body>
-
 </html>
