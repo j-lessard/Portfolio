@@ -13,9 +13,13 @@ body p {
 
 img { 
 	border-radius: 40px; 
+	width: 20vw;
+	
 	
 	
 }
+
+
 
 .col-lg-12 {
 	top: -25px;
@@ -26,14 +30,9 @@ h1 {
 	font-size:48px;
 }
 
-h2 {
-	font-family: Georgia, serif;
-	position: absolute;	
-	font-size:44px;
-	left: 26%;
-}
 
-h3 {
+
+h2 {
 	font-family: 'Franklin Gothic', sans-serif;
 	font-size:24px;
 
@@ -41,15 +40,7 @@ h3 {
 
 
 
-h4 {
-	font-family: Georgia, serif;
-	font-size:34px;
-	position: absolute;
-	top: 82%;
-	left: 26%;
-	text-decoration: underline;
 
-}
 
 p1 {
 	font-family: Georgia, serif;
