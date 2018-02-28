@@ -6,9 +6,69 @@ body {
 
 }
 
+h1 {
+	font-family: 'Merriweather', serif;
+	position: relative;
+	left:16vw;
+	font-size:48px;
+}
+
+p1 {
+	position: relative;
+	left: 25vw;
+	font-size: 12pt;
+	top: 2vh;
+}
+
+.text_container{
+	
+	width: 80%;
+}
+
+
+p2 {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	position: relative;
+	display: inline-block;
+	left: 6vw;
+	top: 10vh;
+
+}
+
+
+h2 {
+	font-family: 'Merriweather', serif;
+	position: relative;	
+	font-size: 30px;
+	left: 56%;
+	top: 9VH;
+	color: black;
+	text-decoration: underline
+
+}
+
+
+.sources ul li {
+	position: relative;
+	left:40%;
+	top: 9vh;
+}
+
 
 img {
-	width: 300%
+	position: relative;
+	margin-top: 5%;
+	width: 50%;	
+	left: 15vw;
+}
+
+a {
+	color: #34576d;
+}
+
+a:hover {
+	color: #333333;
 }
 /* Navigation Bar styling */
 
