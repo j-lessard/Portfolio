@@ -8,30 +8,33 @@
     <meta name="author" content="">
 
     <title>Jordan's Portfolio</title>
+
+    <!--Leaflet CSS-->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
 	
-	<link rel="stylesheet" href="css\port_slider.css" />
-	<link rel="stylesheet" href="css\leaflet-slider.css"/>
-	
+	<!--Bootstrap CSS-->	
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
- 
+	<!--Custom CSS--> 
     <link href="css/3-col-portfolio.css" rel="stylesheet">
-
     <link href="css/Shorelines.css" rel="stylesheet">
+
+    <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">  
 </head>
 <body>
+
+	<!--Import leaflet-->
 	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-	<script src='https://unpkg.com/shpjs@latest/dist/shp.js'></script>
-	
+
+	<!--Import shp library-->
+	<script src='https://unpkg.com/shpjs@latest/dist/shp.js'></script>	
 	<script src="js\leaflet.shpfile.js"></script>
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-          
-             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="index.html">Projects</a>
@@ -44,17 +47,9 @@
                         <a href="resume.html">Resume</a>
                     </li>
                 </ul>
-            </div>
-            
-        </div>
-        
+            </div>            
+        </div>        
     </nav>
-	
-	
-	
-
-
-	
 
 	<div id="map"></div>
 		<div id="slidecontainer">
@@ -97,8 +92,7 @@
     	// Add OpenStreetMap tile layer to map element
 		L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', { attribution: '© OpenStreetMap' }).addTo(map);
 		
-		//Adds shapefiles, a lot of them
-		
+		//Adds shapefiles, a lot of them		
 		var shore11000 = new L.Shapefile('data/11000.zip', {
 			"style": {
 			"color" : "#FFFFFF",
@@ -243,7 +237,7 @@
 			}
 		});		
 
-		var modern = new L.Shapefile('data/modern.zip', {
+		var modern = new L.Shapefile('data/Modern.zip', {
 			"style": {
 			"color" : "#FFFFFF",
 			"weight" : 2,
@@ -251,21 +245,13 @@
 			}
 		});
 		
-		
-		
-		
-		
-		
-		
+		//Create slider		
 		var slider = document.getElementById("myRange");
 		var output = document.getElementById("demo");
 		output.innerHTML = "2016 CE"; // Display the default slider value
 		
 		// Update the current slider value (each time you drag the slider handle)
-		slider.oninput = function() {
-		    
-		    
-		    
+		slider.oninput = function() {	    
 		   
 			if (this.value == "2000") {
 		    	output.innerHTML = "2016 CE";
@@ -378,16 +364,10 @@
 		  		output.innerHTML = "11000 BCE";
 		  		map.removeLayer(shore10500);
 		  		map.removeLayer(shore11500);
-				shore11000.addTo(map);
-
-		
-		} 
-	
+				shore11000.addTo(map);		
+		} 	
 	}
-
 	modern.addTo(map);
 	</script>
-
-
 </body>
 </html>
