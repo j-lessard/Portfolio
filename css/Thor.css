@@ -12,7 +12,6 @@ body {
 	position: relative;
 	top: 5vh;
 	width: 50vw; 
-	height: 50vh; 
 	right: 1vw;
 	margin: auto
 
@@ -30,7 +29,7 @@ p1 {
 	font-family: 'Open Sans', sans-serif;
 	font-size:16px;
 	position: relative;
-	top: 47vh;
+	top: 10vh;
 	left: 24.5vw;
 	
 	
@@ -41,7 +40,7 @@ h2 {
 	position: relative;	
 	font-size: 30px;
 	left: 44vw;
-	top: 47vh;
+	top: 12vh;
 	color: black;
 	text-decoration: underline
 
@@ -51,7 +50,7 @@ h2 {
 .sources ul li {
 	position: relative;
 	left:35vw;
-	top: 48vh;
+	top: 14vh;
 }
 
 a {
